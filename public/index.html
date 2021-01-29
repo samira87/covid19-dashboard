@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+	<meta name=viewport content="width=device-width, initial-scale=1, initial-scale=1.0">
+	<title>Coronavirus Dashboard</title>
+
+    <script src="js/jquery.slim.min.js" type="text/javascript"></script>
+    <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+	<script src="js/content.js" type="text/javascript"></script>
+	
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" data-theme-bootstrap>
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" data-theme-style>
+	<link rel="stylesheet" type="text/css" href="css/theme.css" >
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png" sizes=32x32>
+</head>
+
+<body class="coronavirus-theme bg-light theme-light" data-spy="scroll" data-offset="80">
+	<header>
+	    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+	        <a class="navbar-brand" href="#"><h1 class="display-5 d-none d-md-inline">Coronavirus Dashboard</h1>
+	            <span><i class="fa fa-virus"></i> | COVID-19 Tracker</span></a>
+				<span class="pull-right"><i class="fa fa-adjust" data-theme-switch></i></span>
+	    </nav>
+	</header>
+	
+	<!-- main content -->
+	<div id="atf"></div>
+	<div id="btf">    
+	    <div class="container-fluid">
+	
+	       <!-- covid-19 update -->
+<div class="row pt-4">
+	
+	<!-- coronavirus update -->
+	<div class="col-12 col-md-6 look2">
+		
+		<!-- coronavirus cases -->
+		<div class="row">
+			<!-- cases total -->
+<div class="col-12 col-lg-6 pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesTotal">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /cases total -->
+
+<!-- cases active -->
+<div class="col-12 col-lg-6 pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesActive">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /cases active -->
+
+<!-- cases recovered -->
+<div class="col-12 col-lg-6 pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesRecovered">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /cases recovered -->
+
+<!-- cases deceased -->
+<div class="col-12 col-lg-6 pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesDeceased">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /cases deceased -->
+
+<!-- cases tested -->
+<div class="col-12 col-lg-6 pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesTested">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /cases tested -->
+
+<!-- cases critical -->
+<div class="col-12 col-lg-6 pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesCritical">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /cases critical -->
+		
+		</div><!-- /coronavirus cases -->
+		
+		<!-- coronavirus today & graph -->
+		<div class="row">
+			
+			<!-- today -->
+			<div class="col-12 col-lg-6 d-none d-md-block">
+				<!-- new cases today -->
+<div class="pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesNewToday">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /new cases today -->
+
+<!-- new recovered today -->
+<div class="pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesNewRecovered">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /new recovered today -->
+
+<!-- new deceased today -->
+<div class="pb-3">
+	<div class="card">					
+		<div class="d-flex" id="casesNewDeceased">
+			
+			<div class="p-2 flex-sign mr-2">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa case-icon fa-stack-1x fa-inverse"></i>
+				</span>						
+			</div>
+			
+			<div class="p-2 flex-fill">
+				<div class="p-block text-muted">
+					<span class="case-title">&nbsp;</span>
+					<span class="badge case-badge badge-pill float-right">&#8679;</span>
+				</div>
+				<div class="p-block case-number">&nbsp;</div>
+			</div>
+
+		</div>					
+	</div>
+</div><!-- /new deceased secondary -->
+			
+			</div><!-- /today -->
+			
+			<!-- graph -->
+			<div class="col-12 col-lg-6 d-none d-lg-block">
+				<div class="card graph" id="casesGraph">
+					<div class="card-body">
+						<canvas></canvas>
+					</div>
+				</div>
+
+				<script src="js/Chart.min.js"></script>					
+			</div><!-- /graph -->	
+			
+		</div> <!-- /coronavirus today & graph -->
+		
+	</div><!-- /coronavirus update -->	
+	
+	<!-- coronavirus map -->
+	<div class="col-12 col-md-6">	
+	<div class="card" id="casesMap">
+    <div class="map"></div>
+    <!--map-->
+</div>
+
+<link rel="stylesheet" href="css/jqvmap.min.css">
+
+<script src="js/jquery.vmap.min.js"></script>
+<script src="js/jquery.vmap.world.js"></script>
+	</div><!-- /coronavirus map -->	
+	
+</div><!-- /covid-19 update -->
+
+<!-- covid-19 top 10 -->
+<div class="row pt-4 top-list">
+	
+	<!-- top 10 set1 -->
+	<div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2" data-top-by="total">
+        <div class="row mb-1">
+			<div class="col-12 text-muted small">
+				<span class="pl-1">Top Cases</span>
+			</div>
+        </div>
+
+		<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+	
+	</div>
+	
+	<!-- top 10 set2 -->
+	<div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2" data-top-by="total_change">
+        <div class="row mb-1">
+			<div class="col-12 text-muted small">
+				<span class="pl-1">Top Cases (Today)</span>
+			</div>
+        </div>
+
+		<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+		
+	</div>
+
+    <!-- top 10 set3 -->
+    <div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2 d-none d-md-block" data-top-by="active">
+        <div class="row mb-1">
+			<div class="col-12 text-muted small">
+				Top Active
+			</div>
+        </div>
+
+        <div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+    </div>
+	
+	<!-- top 10 set4 -->
+	<div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2 d-none d-md-block" data-top-by="recovered">
+        <div class="row mb-1">
+			<div class="col-12 text-muted small">
+				Top Recovered
+			</div>
+        </div>
+
+		<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+		
+	</div>
+	
+	<!-- top 10 set5 -->
+	<div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2 d-none d-md-block" data-top-by="deaths">
+        <div class="row mb-1">
+			<div class="col-12 text-muted small">
+				Top Deaths
+			</div>
+        </div>
+
+		<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+		
+	</div>
+	
+	<!-- top 10 set6 -->
+	<div class="col-6 col-md-4 col-lg-3 col-xl-2 mb-2 d-none d-md-block" data-top-by="tested">
+        <div class="row mb-1">
+			<div class="col-12 text-muted small">
+				Top Tested
+			</div>
+        </div>
+
+		<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+
+<div class="card mb-2">
+	<div class="row">
+		<div class="col-2">
+			<img class="top-flag" width="32" height="32">
+		</div>
+		<div class="col-5 d-none d-md-block">
+			<span class="top-country text-muted small"></span>
+		</div>
+		<div class="col-5 pl-4 pl-sm-3">
+			<span class="top-number text-small"></span>
+		</div>
+	</div>
+</div><!--/topCases item -->
+		
+	</div>
+
+</div><!-- /covid-19 top 10 -->
+
+<!-- covid-19 top all -->
+<div class="row pt-4 top-table d-none d-lg-block">
+	
+	<!-- table -->
+	<div class="col-12">    
+	<div class="card">
+	<div class="card-body">
+		<div class="table" id="topTable"></div>
+	</div>
+</div>
+	</div>
+	
+</div><!-- /covid-19 top all -->
+
+<!-- covid-19 news -->
+<div class="row pt-4 news">
+    <!-- tweets -->
+    <div class="col-12 col-md-4 mb-2 d-none d-md-block">
+	<div id="tweets">
+    <a class="twitter-timeline" data-height="230" href="https://twitter.com/QUARCountry?ref_src=twsrc%5Etfw">Tweets by QUARCountry</a>
+</div>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    </div>
+    <!-- news -->
+    <div class="col-12 col-md-8 col-xl-5 mb-2">
+	<div class="card news-feed">
+	<div class="card-body">
+    
+		<div class="row" data-news-template> 
+	        <div class="col-md-2 mb-2 news-date text-muted d-none d-md-block" data-news-template-date></div>
+			<div class="col-12 col-md-10 mb-2 news-link">
+	            <i class="fa fa-rss"></i> <a href="#" data-news-template-title data-news-template-link></a>
+	        </div>
+	    </div>
+	
+	</div>
+</div>
+	
+
+    </div>
+	<!-- empty s -->
+    <div class="col-12 col-xl-3 mb-2 d-none d-xl-block">
+	<div class="card custom">
+	<div class="card-body text-muted">
+	
+	Coronavirus (COVID-19) live updates and historical data including Day, Week, Month, Year, Change per Day. Total Cases, Active, Deaths, Recovered and Tested. World Regions by Country. Free corona virus live updates with <a class="text-muted" href="https://github.com/Yatko/Coronavirus-API">COVID-19 API</a>.<br />
+	<p class="mt-2">Coronavirus Update - Latest news. COVID-19 cases, map, graph, statistics and tracker.</p>
+	
+	</div>
+</div>
+    </div>
+</div><!-- /covid-19 news -->
+
+<!-- footer -->
+<div class="row pb-4 footer">
+    <div class="col-12">
+	<div class="card">
+	<div class="card-body">
+		
+		<div class="row text-muted small">
+			<div class="col-10 col-md-5">
+				<strong>2020 Coronavirus Pandemic Tracker</strong><br />
+				Updated LIVE via <a class="text-muted" href="https://github.com/Yatko/Coronavirus-API" title="Coronavirus API">Coronavirus API</a>
+			</div>
+			<div class="col-12 col-md-7 text-right d-none d-md-block">
+				<a class="text-muted mr-4" href="https://twitter.com/QUARCountry" title="Quarantine Country"><i class="fab fa-twitter"></i></a>
+				<a class="text-muted mr-4" href="https://quarantine.country" title="Quarantine Country"><i class="fa fa-globe-americas"></i></a>
+				<a class="text-muted mr-4" href="https://community.h7.org/category/19/covid-19" title="Quarantine Country"><i class="fa fa-info-circle"></i></a>
+				<div class="pull-right text-right">
+					Copyright © 2020 <a class="text-muted" href="https://quarantine.country" title="Quarantine Country">Coronavirus Dashboard</a><br />All Rights Reserved
+				</div>
+			</div>
+			<div class="col-2 text-right d-none d-block d-sm-none">
+				<a class="text-muted mr-4" href="https://quarantine.country" title="Quarantine Country"><i class="fa fa-globe-americas fa-3x"></i></a>
+			</div>
+		</div>
+		
+	</div>
+</div>
+    </div>
+</div><!-- /footer -->
+
+		   
+	    </div><!--end container-fluid-->
+	</div>
+
+	<!-- /main content -->
+    <script async defer src="js/script.js"></script>
+    <script async defer src="js/map.js"></script>
+    <script async defer src="js/chart.js"></script>
+    <script async defer src="js/top.js"></script>
+    <script async defer src="js/table.js"></script>
+    <script async defer src="js/news.js"></script>
+    <script async defer src="js/theme.js"></script>
+	<script src='js/a076d05399.js'></script>
+</body>
+</html>
+ 
