@@ -151,7 +151,7 @@ var render = function (valueMap) {
 };
 
 Promise.all([
-    fetch('proxy/summary')
+    fetch('https://api.quarantine.country/api/v1/summary/latest')
         .then(
             response => {
                 if (response.ok) {
@@ -159,7 +159,7 @@ Promise.all([
                 }
             }
         ),
-    fetch('proxy/spots')
+    fetch('https://api.quarantine.country/api/v1/spots/summary')
         .then(
             response => {
                 if (response.ok) {
@@ -167,7 +167,7 @@ Promise.all([
                 }
             }
         ),
-    fetch('proxy/news')
+    fetch('https://tools.cdc.gov/api/v2/resources/media')
         .then(
             response => {
                 if(response.ok) {
@@ -183,6 +183,6 @@ Promise.all([
             renderLineChart(document.querySelector('#casesGraph canvas'), spots['data']);
             renderTop(summary['data']);
             renderTable(document.querySelector('#topTable'), summary['data'], tableConfig);
-            renderNews(news);
+            renderNews(news['results']);
         }
     );
