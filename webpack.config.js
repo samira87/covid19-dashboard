@@ -1,28 +1,40 @@
 const path = require('path')
 const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   entry: {
-    server: './src/index.js',
+    main: path.resolve(__dirname,'./src/index.js'),
   },
   output: {
     path: path.join(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: '[name].js',
+    globalObject: 'this'
   },
-  target: 'node',
-  node: {
-    // Need this when working with express, otherwise the build fails
-    __dirname: false,   // if you don't put this is, __dirname
-    __filename: false,  // and __filename return blank or /
+  target: 'web',
+  devtool: 'source-map',
+  //externals: [nodeExternals({allowlist: ['jquery']})], // Need this to avoid error when working with Express
+  externals: {
+    'jquery' : 'jQuery',
+    'jQuery': 'jQuery',
+    'moment': 'moment'
   },
-  externals: [nodeExternals()], // Need this to avoid error when working with Express
   module: {
-    rules: [
+    rules: [{
+      test: require.resolve("jquery"),
+        loader: "expose-loader",
+        options: {
+          exposes: ["$", "jQuery"],
+        },
+      },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel-loader",
+        test: require.resolve("whatwg-fetch"),
+        loader: "expose-loader",
+        options: {
+          exposes: ["fetch"],
+        },
       },
       {
         // Loads the javacript into html template provided.
@@ -37,12 +49,33 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ["css-loader"],
       },
       {
-       test: /\.(png|svg|jpg|gif)$/,
-       use: ['file-loader']
+       test: /\.(png|jpg|gif)$/,
+       type: 'asset/resource',
+
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html",
+      excludeChunks: [ 'server' ]
+    })
+    
+  ]
 }

@@ -1,1 +1,112 @@
-(()=>{var e={358:e=>{"use strict";e.exports=require("cookie-parser")},682:e=>{"use strict";e.exports=require("debug")},127:e=>{"use strict";e.exports=require("express")},605:e=>{"use strict";e.exports=require("http")},150:e=>{"use strict";e.exports=require("morgan")},622:e=>{"use strict";e.exports=require("path")}},r={};function s(t){if(r[t])return r[t].exports;var i=r[t]={exports:{}};return e[t](i,i.exports,s),i.exports}(()=>{var e=s(127),r=s(622),t=s(358),i=s(150),o=r.join(__dirname,"html/index.html"),n=e();n.use(i("dev")),n.use(e.json()),n.use(e.urlencoded({extended:!1})),n.use(t()),n.use(e.static(r.join(__dirname))),n.use("/",(function(e,r){r.sendFile(o)}));var u=s(682)("covid19-dashboard:server"),a=s(605),p=function(e){var r=parseInt(e,10);return isNaN(r)?e:r>=0&&r}(process.env.PORT||"3000");n.set("port",p);var c=a.createServer(n);c.listen(p),c.on("error",(function(e){if("listen"!==e.syscall)throw e;var r="string"==typeof p?"Pipe "+p:"Port "+p;switch(e.code){case"EACCES":console.error(r+" requires elevated privileges"),process.exit(1);break;case"EADDRINUSE":console.error(r+" is already in use"),process.exit(1);break;default:throw e}})),c.on("listening",(function(){var e=c.address(),r="string"==typeof e?"pipe "+e:"port "+e.port;u("Listening on "+r)}))})()})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "cookie-parser":
+/*!********************************!*\
+  !*** external "cookie-parser" ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("cookie-parser");;
+
+/***/ }),
+
+/***/ "debug":
+/*!************************!*\
+  !*** external "debug" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("debug");;
+
+/***/ }),
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("express");;
+
+/***/ }),
+
+/***/ "http":
+/*!***********************!*\
+  !*** external "http" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("http");;
+
+/***/ }),
+
+/***/ "morgan":
+/*!*************************!*\
+  !*** external "morgan" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("morgan");;
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("path");;
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+(() => {
+/*!******************************!*\
+  !*** ./src/server/server.js ***!
+  \******************************/
+eval("var express = __webpack_require__(/*! express */ \"express\");\n\nvar path = __webpack_require__(/*! path */ \"path\");\n\nvar cookieParser = __webpack_require__(/*! cookie-parser */ \"cookie-parser\");\n\nvar logger = __webpack_require__(/*! morgan */ \"morgan\");\n\nvar HTML_FILE = path.join(__dirname, 'index.html');\nvar app = express();\napp.use(logger('dev'));\napp.use(express.json());\napp.use(express.urlencoded({\n  extended: false\n}));\napp.use(cookieParser());\napp.use(express[\"static\"](path.join(__dirname)));\napp.use('*', function (req, res) {\n  res.sendFile(HTML_FILE);\n});\n\nvar debug = __webpack_require__(/*! debug */ \"debug\")('covid19-dashboard:server');\n\nvar http = __webpack_require__(/*! http */ \"http\");\n\nvar port = normalizePort(process.env.PORT || '3000');\napp.set('port', port);\n/**\n * Create HTTP server.\n */\n\nvar server = http.createServer(app);\n/**\n * Listen on provided port, on all network interfaces.\n */\n\nserver.listen(port);\nserver.on('error', onError);\nserver.on('listening', onListening);\n/**\n * Normalize a port into a number, string, or false.\n */\n\nfunction normalizePort(val) {\n  var port = parseInt(val, 10);\n\n  if (isNaN(port)) {\n    // named pipe\n    return val;\n  }\n\n  if (port >= 0) {\n    // port number\n    return port;\n  }\n\n  return false;\n}\n/**\n * Event listener for HTTP server \"error\" event.\n */\n\n\nfunction onError(error) {\n  if (error.syscall !== 'listen') {\n    throw error;\n  }\n\n  var bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port; // handle specific listen errors with friendly messages\n\n  switch (error.code) {\n    case 'EACCES':\n      console.error(bind + ' requires elevated privileges');\n      process.exit(1);\n      break;\n\n    case 'EADDRINUSE':\n      console.error(bind + ' is already in use');\n      process.exit(1);\n      break;\n\n    default:\n      throw error;\n  }\n}\n/**\n * Event listener for HTTP server \"listening\" event.\n */\n\n\nfunction onListening() {\n  var addr = server.address();\n  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;\n  debug('Listening on ' + bind);\n}\n\n//# sourceURL=webpack://covid19-dashboard/./src/server/server.js?");
+})();
+
+/******/ })()
+;

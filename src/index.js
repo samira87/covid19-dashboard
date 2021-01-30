@@ -1,98 +1,48 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+import $ from 'jquery';
+window.fetch = require('whatwg-fetch');
+window.$ = require('jquery');
+window.jQuery = require('jquery');
 
-const HTML_FILE = path.join(__dirname, 'html/index.html')
+import './fonts/fontawesome-webfont.eot';
+import './fonts/fontawesome-webfont.svg';
+import './fonts/fontawesome-webfont.ttf';
+import './fonts/fontawesome-webfont.woff2';
 
-var app = express();
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname)));
+import './images/favicon.png';
+import './images/sort_asc_disabled.png';
+import './images/sort_asc.png';
+import './images/sort_both.png';
+import './images/sort_desc_disabled.png';
+import './images/sort_desc.png';
 
-app.use('/', (req, res) => {
-  res.sendFile(HTML_FILE)
-});
+import './css/bootstrap.min.css';
+import './css/bootstrap-dark.min.css';
+import './css/jquery.dataTables.min.css';
+import './css/jqvmap.min.css';
+import './css/style.css';
+import './css/theme.css';
+import './css/font-awesome.min.css';
 
-var debug = require('debug')('covid19-dashboard:server');
-var http = require('http');
+//import './js/jquery.js';
+//import './js/jquery.slim.min.js';
+//import './js/chart.js';
+import './js/content.js';
+//import './js/jquery.vmap.min.js';
+//import './js/chart-bars.js';
+//import './js/Chart.min.js';
+import './js/map.js';
+import './js/table.js';
+import './js/theme.js';
+import './js/news.js';
+//import './js/jquery.dataTables.min.js';
+//import './js/jquery.vmap.world.js';
+import './js/script.js';
+import './js/top.js';
+import './js/a076d05399.js';
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
 
-/**
- * Create HTTP server.
- */
 
-var server = http.createServer(app);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
 
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
 
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
-}
-
-/**
- * Event listener for HTTP server "error" event.
- */
-
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
-  }
-
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
-
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
-  }
-}
-
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
 

@@ -1,5 +1,9 @@
 'use strict';
 
+if (typeof (document) !== "undefined") {
+    //script
+ 
+
 var trigger = document.querySelector('[data-theme-switch]'),
     bootstrap = document.querySelector('[data-theme-bootstrap]'),
     twitter = document.querySelector('#tweets');
@@ -118,4 +122,5 @@ if (trigger) {
         e.preventDefault();
         changeTheme(getActiveTheme() === 'light' ? 'dark' : 'light')
     });
+}
 }

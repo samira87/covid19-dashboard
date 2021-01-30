@@ -3,15 +3,14 @@
 <head>
 	<meta name=viewport content="width=device-width, initial-scale=1, initial-scale=1.0">
 	<title>Coronavirus Dashboard</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
-    <script src="js/jquery.slim.min.js" type="text/javascript"></script>
-    <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
-	<script src="js/content.js" type="text/javascript"></script>
-	
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" data-theme-bootstrap>
-    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" data-theme-style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" data-theme-style>
 	<link rel="stylesheet" type="text/css" href="css/theme.css" >
 	<link rel="shortcut icon" href="images/favicon.png" type="image/png" sizes=32x32>
 </head>
@@ -285,10 +284,9 @@
     <!--map-->
 </div>
 
-<link rel="stylesheet" href="css/jqvmap.min.css">
-
-<script src="js/jquery.vmap.min.js"></script>
-<script src="js/jquery.vmap.world.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jquery.vmap.min.js" type="text/javascript"></script>
+<script src="https://germini.info/js/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
 	</div><!-- /coronavirus map -->	
 	
 </div><!-- /covid-19 update -->
@@ -1287,13 +1285,546 @@
 	</div>
 
 	<!-- /main content -->
-    <script async defer src="js/script.js"></script>
-    <script async defer src="js/map.js"></script>
-    <script async defer src="js/chart.js"></script>
-    <script async defer src="js/top.js"></script>
-    <script async defer src="js/table.js"></script>
-    <script async defer src="js/news.js"></script>
-    <script async defer src="js/theme.js"></script>
+
+	<script>'use strict';
+
+			var i18n = {
+				'Flag': 'Flag',
+				'Name': 'Name',
+				'Total cases': 'Total cases',
+				'New cases': 'New cases',
+				'Active cases': 'Active cases',
+				'Deaths': 'Deaths',
+				'New deaths': 'New deaths',
+				'Recovered': 'Recovered',
+				'Tested': 'Tested',
+				'Deceased': 'Deceased',
+				'Critical': 'Critical',
+				'New Cases': 'New Cases',
+				'US': 'USA',
+				'GB': 'UK',
+				'AE': 'UAE',
+			
+				'decimal_separator': '.',
+				'thousand_separator': ',',
+			
+				'month_0': 'Jan',
+				'month_1': 'Feb',
+				'month_2': 'Mar',
+				'month_3': 'Apr',
+				'month_4': 'May',
+				'month_5': 'Jun',
+				'month_6': 'Jul',
+				'month_7': 'Aug',
+				'month_8': 'Sep',
+				'month_9': 'Oct',
+				'month_10': 'Nov',
+				'month_11': 'Dec'
+			};
+			
+			/**
+			 * Warning:
+			 * Do not translate under this section!!!
+			 */
+			var contentMap = {
+				'total': {
+					'icon': 'fa-users',
+					'title': i18n['Total cases'],
+				},
+				'active': {
+					'icon': 'fa-exclamation-triangle',
+					'title': i18n['Active cases'],
+				},
+				'recovered': {
+					'icon': 'fa-child',
+					'title': i18n['Recovered'],
+				},
+				'deceased': {
+					'icon': 'fa-heart-broken',
+					'title': i18n['Deceased'],
+				},
+				'tested': {
+					'icon': 'fa-vial',
+					'title': i18n['Tested'],
+				},
+				'critical': {
+					'icon': 'fa-procedures',
+					'title': i18n['Critical'],
+				},
+				'newToday': {
+					'icon': 'fa-users',
+					'title': i18n['New Cases'],
+				},
+				'newRecovered': {
+					'icon': 'fa-child',
+					'title': i18n['Recovered'],
+				},
+				'newDeceased': {
+					'icon': 'fa-heart-broken',
+					'title': i18n['Deceased'],
+				},
+			};
+			
+			var tableConfig = {
+				'flag': {
+					title: i18n['Flag'],
+					resolve: function(row) {
+						return '<img src="https://www.countryflags.io/' + row['iso3166a2'] + '/flat/64.png" width=32 height=32>';
+					}
+				},
+				'name': i18n['Name'],
+				'total_cases': {
+					title: i18n['Total cases'],
+					resolve: function(row) {
+						return formatNumber(row['total_cases']);
+					}
+				},
+				'new_cases': {
+					title: i18n['New cases'],
+					resolve: function (row) {
+						return formatNumber(row['change']['total_cases']);
+					}
+				},
+				'deaths': {
+					title: i18n['Deaths'],
+					resolve: function (row) {
+						return formatNumber(row['deaths']);
+					}
+				},
+				'new_deaths': {
+					title: i18n['New deaths'],
+					resolve: function (row) {
+						return formatNumber(row['change']['deaths']);
+					}
+				},
+				'recovered': {
+					title: i18n['Recovered'],
+					resolve: function (row) {
+						return formatNumber(row['recovered']);
+					}
+				},
+				'active_cases': {
+					title: i18n['Active cases'],
+					resolve: function (row) {
+						return formatNumber(row['active_cases']);
+					}
+				},
+				'critical': {
+					title: i18n['Critical'],
+					resolve: function (row) {
+						return formatNumber(row['critical']);
+					}
+				}
+			};</script>
+
+	<script>'use strict';
+
+			var colors = [
+				'#FFDB6D',
+				'#FFDA6D',
+				'#FFCA2A',
+				'#ffc107',
+				'#feb900',
+				'#DC5335',
+				'#DC4135',
+				'#DC3545',
+			];
+			
+			var key = function(name) {
+					return name.replace(/[\s_]/g, '_')
+							.replace(/[().,\'\"]/g, '')
+							.toLowerCase();
+			};
+			
+			var resolveColorForNumber = function(cases, step) {
+					if(cases) {
+							return colors[Math.min(Math.floor(cases / step), 7)];
+					}
+			
+					return '#fff';
+			};
+			
+			var resolveDataForRegion = function(summary, code) {
+					return Object.values(summary.regions)
+							.find(
+									function (data) {
+											return data.iso3166a2.toLowerCase() === code.toLowerCase();
+									}
+							);
+			};
+			
+			var renderMap = function(summary) {
+					var min = null,
+							max = null,
+							keys = Object.keys(summary.regions);
+			
+					for(var i = 0; i < keys.length; i++) {
+							var regionData = summary.regions[keys[i]];
+			
+							if(min === null || min > regionData['total_cases']) {
+									min = regionData['total_cases'];
+							}
+			
+							if(max === null || max < regionData['total_cases']) {
+									max = regionData['total_cases'];
+							}
+					}
+			
+					var step = Math.ceil((max - min) / 100);
+					var countryColors = {};
+			
+					for(var i = 0; i < keys.length; i++) {
+							var regionData = summary.regions[keys[i]],
+									key = regionData['iso3166a2'].toLowerCase();
+			
+							countryColors[key] = resolveColorForNumber(regionData['total_cases'], step);
+					}
+			
+					jQuery('#casesMap .map').vectorMap({
+							map: 'world_en',
+							colors: countryColors,
+							backgroundColor: 'transparent',
+							hoverOpacity: 0.7,
+							enableZoom: false,
+							showTooltip: true,
+							showLabels: false,
+							scaleColors: ['#C8EEFF', '#006491'],
+							normalizeFunction: 'polynomial',
+							onLabelShow: function(event, label, code) {
+									var data = resolveDataForRegion(summary, code);
+			
+									label[0].innerHTML += "<div><b>" + __('Total cases') + ":</b> " + formatNumber(!!data ? data['total_cases'] : 0) + "</div>";
+									label[0].innerHTML += "<div><b>" + __('Active cases') + ":</b> " + formatNumber(!!data ? data['active_cases'] : 0) + "</div>";
+									label[0].innerHTML += "<div><b>" + __('Deaths') + ":</b> " + formatNumber(!!data ? data['deaths'] : 0) + "</div>";
+									label[0].innerHTML += "<div><b>" + __('Recovered') + ":</b> " + formatNumber(!!data ? data['recovered'] : 0) + "</div>";
+									label[0].innerHTML += "<div><b>" + __('Tested') + ":</b> " + formatNumber(!!data ? data['tested'] : 0) + "</div>";
+							}
+					});
+			};
+	</script>
+	<script>
+		'use strict';
+
+var ucFirst = function (string) {
+    if (string.length) {
+        string = string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    return string;
+};
+
+var formatNumber = function (number, precision, separate, separator, coma) {
+    var re = '\\d(?=(\\d{' + (separate || 3) + '})+' + (precision > 0 ? '\\D' : '$') + ')',
+        num = number.toFixed(Math.max(0, ~~precision));
+
+    return (coma ? num.replace('.', (coma || __('decimal_separator'))) : num)
+        .replace(new RegExp(re, 'g'), '$&' + (separator || __('thousand_separator')));
+};
+
+var __ = function (phraze, defaultStr) {
+  var candidate = Object.keys(i18n)
+    .find(
+      function (key) {
+        return key.toLowerCase() === phraze.toLowerCase();
+      }
+    );
+
+  if(candidate) {
+    return i18n[candidate];
+  }
+
+  return defaultStr ? defaultStr : phraze;
+};
+
+var getBadgeClassFromNumber = function (number) {
+    if (number > 0) {
+        return 'badge-danger';
+    }
+
+    return (number < 0) ? 'badge-success' : 'badge-light';
+};
+
+var getBadgeFromNumber = function (number) {
+    if (number > 0) {
+        return '&#8679';
+    }
+
+    return (number < 0) ? '&#8681' : '';
+};
+
+var hydrateContentMap = function (payload, original) {
+    return {
+        'total': {
+            ...original['total'],
+            'number': payload['summary']['total_cases'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['total_cases']),
+            'badge': getBadgeFromNumber(payload['change']['total_cases'])
+        },
+        'active': {
+            ...original['active'],
+            'number': payload['summary']['active_cases'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['active_cases']),
+            'badge': getBadgeFromNumber(payload['change']['active_cases'])
+        },
+        'recovered': {
+            ...original['recovered'],
+            'number': payload['summary']['recovered'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['recovered']),
+            'badge': getBadgeFromNumber(payload['change']['recovered'])
+        },
+        'deceased': {
+            ...original['deceased'],
+            'number': payload['summary']['deaths'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['deaths']),
+            'badge': getBadgeFromNumber(payload['change']['deaths'])
+        },
+        'tested': {
+            ...original['tested'],
+            'number': payload['summary']['tested'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['tested']),
+            'badge': getBadgeFromNumber(payload['change']['tested'])
+        },
+        'critical': {
+            ...original['critical'],
+            'number': payload['summary']['critical'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['critical']),
+            'badge': getBadgeFromNumber(payload['change']['critical'])
+        },
+        'newToday': {
+            ...original['newToday'],
+            'number': payload['change']['total_cases'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['total_cases']),
+            'badge': getBadgeFromNumber(payload['change']['total_cases'])
+        },
+        'newRecovered': {
+            ...original['newRecovered'],
+            'number': payload['change']['recovered'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['recovered']),
+            'badge': getBadgeFromNumber(payload['change']['recovered'])
+        },
+        'newDeceased': {
+            ...original['newDeceased'],
+            'number': payload['change']['deaths'],
+            'badge-state': getBadgeClassFromNumber(payload['change']['deaths']),
+            'badge': getBadgeFromNumber(payload['change']['deaths'])
+        },
+    }
+};
+
+var render = function (valueMap) {
+    var keys = Object.keys(valueMap);
+
+    for (var i = 0; i < keys.length; i++) {
+        var container = document.querySelector('#cases' + ucFirst(keys[i]));
+
+        if (!container) {
+            continue;
+        }
+
+        if (valueMap[keys[i]]['icon']) {
+            var iconContainer = container.querySelector('i.case-icon');
+
+            if (iconContainer) {
+                iconContainer.classList.add(valueMap[keys[i]]['icon']);
+            }
+        }
+
+        if (valueMap[keys[i]]['title']) {
+            var titleContainer = container.querySelector('.case-title');
+
+            if (titleContainer) {
+                titleContainer.innerHTML = __(valueMap[keys[i]]['title']);
+            }
+        }
+
+        if (valueMap[keys[i]]['number']) {
+            var numberContainer = container.querySelector('.case-number');
+
+            if (numberContainer) {
+                numberContainer.innerHTML = formatNumber(valueMap[keys[i]]['number']);
+            }
+        }
+
+        if (valueMap[keys[i]]['badge']) {
+            var badgeContainer = container.querySelector('.case-badge');
+
+            if (badgeContainer) {
+                badgeContainer.classList.add(valueMap[keys[i]]['badge-state']);
+                badgeContainer.innerHTML = valueMap[keys[i]]['badge'];
+            }
+        }
+    }
+};
+
+Promise.all([
+    fetch('https://api.quarantine.country/api/v1/summary/latest')
+        .then(
+            response => {
+                if (response.ok) {
+                    return response.json();
+                }
+            }
+        ),
+    fetch('https://api.quarantine.country/api/v1/spots/summary')
+        .then(
+            response => {
+                if (response.ok) {
+                    return response.json();
+                }
+            }
+        ),
+    fetch('https://tools.cdc.gov/api/v2/resources/media')
+        .then(
+            response => {
+                if(response.ok) {
+                    return response.json();
+                }
+            }
+        )
+])
+    .then(
+        function ([summary, spots, news]) {
+            render(hydrateContentMap(summary['data'], contentMap));
+            renderMap(summary['data']);
+            renderLineChart(document.querySelector('#casesGraph canvas'), spots['data']);
+            renderTop(summary['data']);
+            renderTable(document.querySelector('#topTable'), summary['data'], tableConfig);
+            renderNews(news['results']);
+        }
+    );
+
+	</script>
+	<script>
+		'use strict';
+
+if (typeof (document) !== "undefined") {
+    //script
+ 
+
+var trigger = document.querySelector('[data-theme-switch]'),
+    bootstrap = document.querySelector('[data-theme-bootstrap]'),
+    twitter = document.querySelector('#tweets');
+
+var getActiveTheme = function () {
+    return document.body.classList.contains('theme-dark') ?
+           'dark' :
+           'light';
+};
+
+var changeTheme = function (type) {
+    /**
+     * Skip active theme
+     */
+    if (getActiveTheme() === type) {
+        return;
+    }
+
+    switch (type) {
+        default:
+        case 'light':
+            activateLightTheme();
+            break;
+
+        case 'dark':
+            activateDarkTheme();
+            break;
+    }
+
+    localStorage.setItem('theme', type);
+};
+
+var activateLightTheme = function () {
+    document.body.classList.remove('theme-dark');
+    document.body.classList.add('theme-light');
+    document.body.classList.remove('bg-dark');
+    document.body.classList.add('bg-light');
+    trigger.classList.remove('fa-inverse');
+
+    bootstrap.setAttribute('href', 'css/bootstrap.min.css');
+
+    if (twitter) {
+        twitter.innerHTML = '<a class="twitter-timeline"' +
+            'data-height="230" ' +
+            'href="https://twitter.com/QUARCountry?ref_src=twsrc%5Etfw">' +
+            'Tweets by QUARCountry' +
+            '</a>';
+
+        twttr.widgets.load();
+    }
+};
+
+var activateDarkTheme = function () {
+    document.body.classList.remove('theme-light');
+    document.body.classList.add('theme-dark');
+    document.body.classList.remove('bg-light');
+    document.body.classList.add('bg-dark');
+    trigger.classList.add('fa-inverse');
+
+    bootstrap.setAttribute('href', 'css/bootstrap-dark.min.css');
+    localStorage.setItem('theme', 'dark');
+
+    if (twitter) {
+        twitter.innerHTML = '<a class="twitter-timeline" ' +
+            'data-theme="dark" ' +
+            'data-height="230" ' +
+            'href="https://twitter.com/QUARCountry?ref_src=twsrc%5Etfw">' +
+            'Tweets by QUARCountry' +
+            '</a>';
+
+        twttr.widgets.load();
+    }
+};
+
+if (trigger) {
+    var urlParams = new URLSearchParams(window.location.search),
+        localTheme = localStorage.getItem('theme');
+
+    if (urlParams.has('theme')) {
+        changeTheme(urlParams.get('theme'));
+    } else {
+        if(localTheme) {
+            changeTheme(localTheme);
+        } else {
+            if (window.matchMedia) {
+                if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+                    changeTheme('dark')
+                }
+            }
+        }
+
+        /**
+         * Automatic theme switch
+         */
+        if (window.matchMedia) {
+            var query = window.matchMedia('(prefers-color-scheme: dark)');
+
+            try {
+                if(query.addEventListener) {
+                    query.addEventListener('change', e => {
+                        changeTheme(e.matches ? 'dark' : 'light');
+                    });
+                } else {
+                    query.addListener('change', e => {
+                        changeTheme(e.matches ? 'dark' : 'light');
+                    });
+                }
+
+            } catch (e) {
+
+            }
+        }
+    }
+
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        changeTheme(getActiveTheme() === 'light' ? 'dark' : 'light')
+    });
+}
+}
+	</script>
+	<script async defer src="js/chart.js"></script>
+	<script async defer src="js/top.js"></script>
+	<script async defer src="js/table.js"></script>
+	<script async defer src="js/news.js"></script>
 	<script src='js/a076d05399.js'></script>
 </body>
 </html>
