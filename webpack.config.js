@@ -19,31 +19,18 @@ module.exports = {
   externals: {
     'jquery' : 'jQuery',
     'jQuery': 'jQuery',
-    'moment': 'moment'
+    'moment': 'moment',
+    'whatwg-fetch': 'whatwg-fetch'
   },
   module: {
-    rules: [{
-      test: require.resolve("jquery"),
-        loader: "expose-loader",
-        options: {
-          exposes: ["$", "jQuery"],
-        },
-      },
-      {
-        test: require.resolve("whatwg-fetch"),
-        loader: "expose-loader",
-        options: {
-          exposes: ["fetch"],
-        },
-      },
+    rules: [
       {
         // Loads the javacript into html template provided.
         // Entry point is set below in HtmlWebPackPlugin in Plugins 
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
-            //options: { minimize: true }
+            loader: "html-loader"
           }
         ]
       },

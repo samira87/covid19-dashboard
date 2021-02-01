@@ -1,5 +1,6 @@
 import $ from 'jquery';
-window.fetch = require('whatwg-fetch');
+
+//window.fetch = require('whatwg-fetch');
 window.$ = require('jquery');
 window.jQuery = require('jquery');
 
@@ -36,7 +37,7 @@ import './js/theme.js';
 import './js/news.js';
 //import './js/jquery.dataTables.min.js';
 //import './js/jquery.vmap.world.js';
-import './js/script.js';
+//import './js/script.js';
 import './js/top.js';
 import './js/a076d05399.js';
 
