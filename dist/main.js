@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/css/bootstrap-dark.min.css":
@@ -7,7 +8,6 @@
   \****************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -34,7 +34,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --blue: #007bff;\n  --indig
   \***********************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -61,7 +60,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/*!\n * Bootstrap v4.4.1 (https://getb
   \**************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -109,7 +107,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/*!\n *  Font Awesome 4.7.0 by @davega
   \*******************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -154,7 +151,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "table.dataTable{width:100%;margin:0 au
   \********************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -181,7 +177,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".jqvmap-label,.jqvmap-pin{pointer-even
   \***************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -208,7 +203,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "html, body {\n\toverflow-x: hidden; /*
   \***************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -235,7 +229,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "body.theme-dark .card {\n\tbackground-
   \*****************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 /*
@@ -311,7 +304,6 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -353,7 +345,6 @@ module.exports = function cssWithMappingToString(item) {
   \********************************************************/
 /***/ ((module) => {
 
-"use strict";
 
 
 module.exports = function (url, options) {
@@ -397,7 +388,6 @@ module.exports = function (url, options) {
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -412,7 +402,6 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -427,7 +416,6 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -442,7 +430,6 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -457,7 +444,6 @@ __webpack_require__.r(__webpack_exports__);
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -472,7 +458,6 @@ __webpack_require__.r(__webpack_exports__);
   \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -487,7 +472,6 @@ __webpack_require__.r(__webpack_exports__);
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -502,7 +486,6 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -517,7 +500,6 @@ __webpack_require__.r(__webpack_exports__);
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -532,7 +514,6 @@ __webpack_require__.r(__webpack_exports__);
   \********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "c2d0a346e17c47b48a69.png";
 
 /***/ }),
@@ -543,7 +524,6 @@ module.exports = __webpack_require__.p + "c2d0a346e17c47b48a69.png";
   \*********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "4bba59196d7ce2619696.png";
 
 /***/ }),
@@ -554,7 +534,6 @@ module.exports = __webpack_require__.p + "4bba59196d7ce2619696.png";
   \******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "27ac5d1bc294b1fae056.png";
 
 /***/ }),
@@ -565,7 +544,6 @@ module.exports = __webpack_require__.p + "27ac5d1bc294b1fae056.png";
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "8b117faa9d4dd934d6bb.png";
 
 /***/ }),
@@ -576,7 +554,6 @@ module.exports = __webpack_require__.p + "8b117faa9d4dd934d6bb.png";
   \**********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "c4196d3286cc33244c83.png";
 
 /***/ }),
@@ -587,7 +564,6 @@ module.exports = __webpack_require__.p + "c4196d3286cc33244c83.png";
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 module.exports = __webpack_require__.p + "07c018ae0160704a3290.png";
 
 /***/ }),
@@ -598,7 +574,6 @@ module.exports = __webpack_require__.p + "07c018ae0160704a3290.png";
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
@@ -619,20 +594,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./css/style.css */ "./src/css/style.css");
 /* harmony import */ var _css_theme_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./css/theme.css */ "./src/css/theme.css");
 /* harmony import */ var _css_font_awesome_min_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./css/font-awesome.min.css */ "./src/css/font-awesome.min.css");
-/* harmony import */ var _js_content_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./js/content.js */ "./src/js/content.js");
-/* harmony import */ var _js_content_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_js_content_js__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var _js_map_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./js/map.js */ "./src/js/map.js");
-/* harmony import */ var _js_map_js__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_js_map_js__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _js_table_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./js/table.js */ "./src/js/table.js");
-/* harmony import */ var _js_table_js__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_js_table_js__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _js_theme_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./js/theme.js */ "./src/js/theme.js");
-/* harmony import */ var _js_theme_js__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_js_theme_js__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var _js_news_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./js/news.js */ "./src/js/news.js");
-/* harmony import */ var _js_news_js__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_js_news_js__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _js_top_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./js/top.js */ "./src/js/top.js");
-/* harmony import */ var _js_top_js__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_js_top_js__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _js_a076d05399_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./js/a076d05399.js */ "./src/js/a076d05399.js");
-/* harmony import */ var _js_a076d05399_js__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_js_a076d05399_js__WEBPACK_IMPORTED_MODULE_24__);
 
 
 //window.fetch = require('whatwg-fetch');
@@ -662,17 +623,19 @@ window.jQuery = __webpack_require__(/*! jquery */ "jquery");
 //import './js/jquery.js';
 //import './js/jquery.slim.min.js';
 //import './js/chart.js';
-
+//import './js/content.js';
 //import './js/jquery.vmap.min.js';
 //import './js/chart-bars.js';
 //import './js/Chart.min.js';
-
-
-
-
+//import './js/map.js';
+//import './js/table.js';
+//import './js/theme.js';
+//import './js/news.js';
 //import './js/jquery.dataTables.min.js';
 //import './js/jquery.vmap.world.js';
 //import './js/script.js';
+//import './js/top.js';
+//import './js/a076d05399.js';
 
 
 
@@ -681,696 +644,6 @@ window.jQuery = __webpack_require__(/*! jquery */ "jquery");
 
 
 
-
-
-
-/***/ }),
-
-/***/ "./src/js/a076d05399.js":
-/*!******************************!*\
-  !*** ./src/js/a076d05399.js ***!
-  \******************************/
-/***/ (() => {
-
-if (typeof (window) !== "undefined") {
-window.FontAwesomeKitConfig = {"asyncLoading":{"enabled":true},"autoA11y":{"enabled":true},"baseUrl":"https://kit-free.fontawesome.com","license":"free","method":"css","minify":{"enabled":true},"v4shim":{"enabled":false},"version":"latest"};
-!function(){!function(){if(!(void 0===window.Element||"classList"in document.documentElement)){var e,t,n,i=Array.prototype,o=i.push,a=i.splice,s=i.join;r.prototype={add:function(e){this.contains(e)||(o.call(this,e),this.el.className=this.toString())},contains:function(e){return-1!=this.el.className.indexOf(e)},item:function(e){return this[e]||null},remove:function(e){if(this.contains(e)){for(var t=0;t<this.length&&this[t]!=e;t++);a.call(this,t,1),this.el.className=this.toString()}},toString:function(){return s.call(this," ")},toggle:function(e){return this.contains(e)?this.remove(e):this.add(e),this.contains(e)}},window.DOMTokenList=r,e=Element.prototype,t="classList",n=function(){return new r(this)},Object.defineProperty?Object.defineProperty(e,t,{get:n}):e.__defineGetter__(t,n)}function r(e){for(var t=(this.el=e).className.replace(/^\s+|\s+$/g,"").split(/\s+/),n=0;n<t.length;n++)o.call(this,t[n])}}();function f(e){var t,n,i,o;prefixesArray=e||["fa"],prefixesSelectorString="."+Array.prototype.join.call(e,",."),t=document.querySelectorAll(prefixesSelectorString),Array.prototype.forEach.call(t,function(e){n=e.getAttribute("title"),e.setAttribute("aria-hidden","true"),i=!e.nextElementSibling||!e.nextElementSibling.classList.contains("sr-only"),n&&i&&((o=document.createElement("span")).innerHTML=n,o.classList.add("sr-only"),e.parentNode.insertBefore(o,e.nextSibling))})}var e,t,u=function(e){var t=document.createElement("link");t.href=e,t.media="all",t.rel="stylesheet",document.getElementsByTagName("head")[0].appendChild(t)},m=function(e){!function(e,t,n){var i,o=window.document,a=o.createElement("link");if(t)i=t;else{var s=(o.body||o.getElementsByTagName("head")[0]).childNodes;i=s[s.length-1]}var r=o.styleSheets;a.rel="stylesheet",a.href=e,a.media="only x",function e(t){if(o.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(a,t?i:i.nextSibling)});var l=function(e){for(var t=a.href,n=r.length;n--;)if(r[n].href===t)return e();setTimeout(function(){l(e)})};function c(){a.addEventListener&&a.removeEventListener("load",c),a.media=n||"all"}a.addEventListener&&a.addEventListener("load",c),(a.onloadcssdefined=l)(c)}(e)},n=function(e,t){var n=t&&void 0!==t.autoFetchSvg?t.autoFetchSvg:void 0,i=t&&void 0!==t.async?t.async:void 0,o=t&&void 0!==t.autoA11y?t.autoA11y:void 0,a=document.createElement("script"),s=document.scripts[0];a.src=e,void 0!==o&&a.setAttribute("data-auto-a11y",o?"true":"false"),n&&(a.setAttributeNode(document.createAttribute("data-auto-fetch-svg")),a.setAttribute("data-fetch-svg-from",t.fetchSvgFrom)),i&&a.setAttributeNode(document.createAttribute("defer")),s.parentNode.appendChild(a)};function h(e,t){var n=t&&t.shim?e.license+"-v4-shims":e.license,i=t&&t.minify?".min":"";return e.baseUrl+"/releases/"+("latest"===e.version?"latest":"v".concat(e.version))+"/"+e.method+"/"+n+i+"."+e.method}try{if(window.FontAwesomeKitConfig){var i=window.FontAwesomeKitConfig;"js"===i.method&&(t={async:(e=i).asyncLoading.enabled,autoA11y:e.autoA11y.enabled},"pro"===e.license&&(t.autoFetchSvg=!0,t.fetchSvgFrom=e.baseUrl+"/releases/"+("latest"===e.version?"latest":"v".concat(e.version))+"/svgs"),e.v4shim.enabled&&n(h(e,{shim:!0,minify:e.minify.enabled})),n(h(e,{minify:e.minify.enabled}),t)),"css"===i.method&&function(e){var t,n,i,o,a,s,r,l,c=f.bind(f,["fa","fab","fas","far","fal"]);e.autoA11y.enabled&&(n=c,o=[],a=document,s=a.documentElement.doScroll,r="DOMContentLoaded",(l=(s?/^loaded|^c/:/^loaded|^i|^c/).test(a.readyState))||a.addEventListener(r,i=function(){for(a.removeEventListener(r,i),l=1;i=o.shift();)i()}),l?setTimeout(n,0):o.push(n),t=c,"undefined"!=typeof MutationObserver&&new MutationObserver(t).observe(document,{childList:!0,subtree:!0})),e.v4shim.enabled&&(e.asyncLoading.enabled?m(h(e,{shim:!0,minify:e.minify.enabled})):u(h(e,{shim:!0,minify:e.minify.enabled})));var d=h(e,{minify:e.minify.enabled});e.asyncLoading.enabled?m(d):u(d)}(i)}}catch(e){}}();
-}
-
-/***/ }),
-
-/***/ "./src/js/content.js":
-/*!***************************!*\
-  !*** ./src/js/content.js ***!
-  \***************************/
-/***/ (() => {
-
-"use strict";
-
-
-var i18n = {
-  'Flag': 'Flag',
-  'Name': 'Name',
-  'Total cases': 'Total cases',
-  'New cases': 'New cases',
-  'Active cases': 'Active cases',
-  'Deaths': 'Deaths',
-  'New deaths': 'New deaths',
-  'Recovered': 'Recovered',
-  'Tested': 'Tested',
-  'Deceased': 'Deceased',
-  'Critical': 'Critical',
-  'New Cases': 'New Cases',
-  'US': 'USA',
-  'GB': 'UK',
-  'AE': 'UAE',
-
-  'decimal_separator': '.',
-  'thousand_separator': ',',
-
-  'month_0': 'Jan',
-  'month_1': 'Feb',
-  'month_2': 'Mar',
-  'month_3': 'Apr',
-  'month_4': 'May',
-  'month_5': 'Jun',
-  'month_6': 'Jul',
-  'month_7': 'Aug',
-  'month_8': 'Sep',
-  'month_9': 'Oct',
-  'month_10': 'Nov',
-  'month_11': 'Dec'
-};
-
-/**
- * Warning:
- * Do not translate under this section!!!
- */
-var contentMap = {
-  'total': {
-    'icon': 'fa-users',
-    'title': i18n['Total cases'],
-  },
-  'active': {
-    'icon': 'fa-exclamation-triangle',
-    'title': i18n['Active cases'],
-  },
-  'recovered': {
-    'icon': 'fa-child',
-    'title': i18n['Recovered'],
-  },
-  'deceased': {
-    'icon': 'fa-heart-broken',
-    'title': i18n['Deceased'],
-  },
-  'tested': {
-    'icon': 'fa-vial',
-    'title': i18n['Tested'],
-  },
-  'critical': {
-    'icon': 'fa-procedures',
-    'title': i18n['Critical'],
-  },
-  'newToday': {
-    'icon': 'fa-users',
-    'title': i18n['New Cases'],
-  },
-  'newRecovered': {
-    'icon': 'fa-child',
-    'title': i18n['Recovered'],
-  },
-  'newDeceased': {
-    'icon': 'fa-heart-broken',
-    'title': i18n['Deceased'],
-  },
-};
-
-var tableConfig = {
-  'flag': {
-    title: i18n['Flag'],
-    resolve: function(row) {
-      return '<img src="https://www.countryflags.io/' + row['iso3166a2'] + '/flat/64.png" width=32 height=32>';
-    }
-  },
-  'name': i18n['Name'],
-  'total_cases': {
-    title: i18n['Total cases'],
-    resolve: function(row) {
-      return formatNumber(row['total_cases']);
-    }
-  },
-  'new_cases': {
-    title: i18n['New cases'],
-    resolve: function (row) {
-      return formatNumber(row['change']['total_cases']);
-    }
-  },
-  'deaths': {
-    title: i18n['Deaths'],
-    resolve: function (row) {
-      return formatNumber(row['deaths']);
-    }
-  },
-  'new_deaths': {
-    title: i18n['New deaths'],
-    resolve: function (row) {
-      return formatNumber(row['change']['deaths']);
-    }
-  },
-  'recovered': {
-    title: i18n['Recovered'],
-    resolve: function (row) {
-      return formatNumber(row['recovered']);
-    }
-  },
-  'active_cases': {
-    title: i18n['Active cases'],
-    resolve: function (row) {
-      return formatNumber(row['active_cases']);
-    }
-  },
-  'critical': {
-    title: i18n['Critical'],
-    resolve: function (row) {
-      return formatNumber(row['critical']);
-    }
-  }
-};
-
-/***/ }),
-
-/***/ "./src/js/map.js":
-/*!***********************!*\
-  !*** ./src/js/map.js ***!
-  \***********************/
-/***/ (() => {
-
-"use strict";
-
-
-var colors = [
-	'#FFDB6D',
-	'#FFDA6D',
-	'#FFCA2A',
-	'#ffc107',
-	'#feb900',
-	'#DC5335',
-	'#DC4135',
-	'#DC3545',
-];
-
-var key = function(name) {
-    return name.replace(/[\s_]/g, '_')
-        .replace(/[().,\'\"]/g, '')
-        .toLowerCase();
-};
-
-var resolveColorForNumber = function(cases, step) {
-    if(cases) {
-        return colors[Math.min(Math.floor(cases / step), 7)];
-    }
-
-    return '#fff';
-};
-
-var resolveDataForRegion = function(summary, code) {
-    return Object.values(summary.regions)
-        .find(
-            function (data) {
-                return data.iso3166a2.toLowerCase() === code.toLowerCase();
-            }
-        );
-};
-
-var renderMap = function(summary) {
-    var min = null,
-        max = null,
-        keys = Object.keys(summary.regions);
-
-    for(var i = 0; i < keys.length; i++) {
-        var regionData = summary.regions[keys[i]];
-
-        if(min === null || min > regionData['total_cases']) {
-            min = regionData['total_cases'];
-        }
-
-        if(max === null || max < regionData['total_cases']) {
-            max = regionData['total_cases'];
-        }
-    }
-
-    var step = Math.ceil((max - min) / 100);
-    var countryColors = {};
-
-    for(var i = 0; i < keys.length; i++) {
-        var regionData = summary.regions[keys[i]],
-            key = regionData['iso3166a2'].toLowerCase();
-
-        countryColors[key] = resolveColorForNumber(regionData['total_cases'], step);
-    }
-
-    jQuery('#casesMap .map').vectorMap({
-        map: 'world_en',
-        colors: countryColors,
-        backgroundColor: 'transparent',
-        hoverOpacity: 0.7,
-        enableZoom: false,
-        showTooltip: true,
-        showLabels: false,
-        scaleColors: ['#C8EEFF', '#006491'],
-        normalizeFunction: 'polynomial',
-        onLabelShow: function(event, label, code) {
-            var data = resolveDataForRegion(summary, code);
-
-            label[0].innerHTML += "<div><b>" + __('Total cases') + ":</b> " + formatNumber(!!data ? data['total_cases'] : 0) + "</div>";
-            label[0].innerHTML += "<div><b>" + __('Active cases') + ":</b> " + formatNumber(!!data ? data['active_cases'] : 0) + "</div>";
-            label[0].innerHTML += "<div><b>" + __('Deaths') + ":</b> " + formatNumber(!!data ? data['deaths'] : 0) + "</div>";
-            label[0].innerHTML += "<div><b>" + __('Recovered') + ":</b> " + formatNumber(!!data ? data['recovered'] : 0) + "</div>";
-            label[0].innerHTML += "<div><b>" + __('Tested') + ":</b> " + formatNumber(!!data ? data['tested'] : 0) + "</div>";
-        }
-    });
-};
-
-/***/ }),
-
-/***/ "./src/js/news.js":
-/*!************************!*\
-  !*** ./src/js/news.js ***!
-  \************************/
-/***/ (() => {
-
-"use strict";
-
-
-var renderNews = function(news, options) {
-    var template = document.querySelector('[data-news-template]');
-
-    if(!template) {
-        return;
-    }
-
-    var container = template.parentElement;
-    container.innerHTML = '';
-
-    for(var i = 0; i < Math.min(news.length, (options ? options.amount : 3)); i++) {
-        var article = news[i];
-        var articleEl = template.cloneNode(true);
-
-        var titleEl = articleEl.querySelector('[data-news-template-title]'),
-            linkEl = articleEl.querySelector('[data-news-template-link]'),
-            dateEl = articleEl.querySelector('[data-news-template-date]');
-
-        if(titleEl) {
-            titleEl.innerText = article['title']
-        }
-
-        if(linkEl) {
-            linkEl.setAttribute('href', article['link']);
-        }
-
-        if(dateEl) {
-            var date = new Date(article['date']);
-
-            if(date instanceof Date && !isNaN(date.getTime())) {
-                dateEl.innerHTML = __('month_' + date.getMonth()) + ' ' +
-                    (date.getDate() > 10 ? date.getDate() : '0' + date.getDate());
-            }
-        }
-
-        container.appendChild(articleEl);
-    }
-};
-
-/***/ }),
-
-/***/ "./src/js/table.js":
-/*!*************************!*\
-  !*** ./src/js/table.js ***!
-  \*************************/
-/***/ (() => {
-
-"use strict";
-
-
-var renderTable = function (element, data, options) {
-    var tableEl = document.createElement('table'),
-        tableKeys = Object.keys(options),
-        tableHeaderEl = tableEl.createTHead(),
-        tableBodyEl = tableEl.createTBody();
-
-    var i;
-    var regionKeys = Object.keys(data['regions']);
-
-    /**
-     * Fill header
-     */
-    tableHeaderEl.insertRow();
-
-    for (i = 0; i < tableKeys.length; i++) {
-        var cellConfig = options[tableKeys[i]],
-            thEl = tableHeaderEl.rows[0].insertCell();
-
-        if(!cellConfig) {
-            continue;
-        }
-
-        thEl.innerHTML = typeof cellConfig === 'string' ?
-                           cellConfig :
-                           cellConfig['title'];
-    }
-
-    /**
-     * Fill table body
-     */
-    for(i = 0; i < regionKeys.length; i++) {
-        var region = data['regions'][regionKeys[i]];
-        var rowEl = tableBodyEl.insertRow();
-
-        for (var k = 0; k < tableKeys.length; k++) {
-            var cellConfig = options[tableKeys[k]],
-                value;
-
-            if(typeof cellConfig === 'object') {
-                value = cellConfig['resolve'](region);
-            } else {
-                if(region.hasOwnProperty(tableKeys[k])) {
-                    value = region[tableKeys[k]];
-                }
-            }
-
-            rowEl.insertCell()
-                .innerHTML = value;
-        }
-    }
-
-    element.appendChild(tableEl);
-    $(tableEl).DataTable();
-};
-
-/***/ }),
-
-/***/ "./src/js/theme.js":
-/*!*************************!*\
-  !*** ./src/js/theme.js ***!
-  \*************************/
-/***/ (() => {
-
-"use strict";
-
-
-if (typeof (document) !== "undefined") {
-    //script
- 
-
-var trigger = document.querySelector('[data-theme-switch]'),
-    bootstrap = document.querySelector('[data-theme-bootstrap]'),
-    twitter = document.querySelector('#tweets');
-
-var getActiveTheme = function () {
-    return document.body.classList.contains('theme-dark') ?
-           'dark' :
-           'light';
-};
-
-var changeTheme = function (type) {
-    /**
-     * Skip active theme
-     */
-    if (getActiveTheme() === type) {
-        return;
-    }
-
-    switch (type) {
-        default:
-        case 'light':
-            activateLightTheme();
-            break;
-
-        case 'dark':
-            activateDarkTheme();
-            break;
-    }
-
-    localStorage.setItem('theme', type);
-};
-
-var activateLightTheme = function () {
-    document.body.classList.remove('theme-dark');
-    document.body.classList.add('theme-light');
-    document.body.classList.remove('bg-dark');
-    document.body.classList.add('bg-light');
-    trigger.classList.remove('fa-inverse');
-
-    bootstrap.setAttribute('href', 'css/bootstrap.min.css');
-
-    if (twitter) {
-        twitter.innerHTML = '<a class="twitter-timeline"' +
-            'data-height="230" ' +
-            'href="https://twitter.com/QUARCountry?ref_src=twsrc%5Etfw">' +
-            'Tweets by QUARCountry' +
-            '</a>';
-
-        twttr.widgets.load();
-    }
-};
-
-var activateDarkTheme = function () {
-    document.body.classList.remove('theme-light');
-    document.body.classList.add('theme-dark');
-    document.body.classList.remove('bg-light');
-    document.body.classList.add('bg-dark');
-    trigger.classList.add('fa-inverse');
-
-    bootstrap.setAttribute('href', 'css/bootstrap-dark.min.css');
-    localStorage.setItem('theme', 'dark');
-
-    if (twitter) {
-        twitter.innerHTML = '<a class="twitter-timeline" ' +
-            'data-theme="dark" ' +
-            'data-height="230" ' +
-            'href="https://twitter.com/QUARCountry?ref_src=twsrc%5Etfw">' +
-            'Tweets by QUARCountry' +
-            '</a>';
-
-        twttr.widgets.load();
-    }
-};
-
-if (trigger) {
-    var urlParams = new URLSearchParams(window.location.search),
-        localTheme = localStorage.getItem('theme');
-
-    if (urlParams.has('theme')) {
-        changeTheme(urlParams.get('theme'));
-    } else {
-        if(localTheme) {
-            changeTheme(localTheme);
-        } else {
-            if (window.matchMedia) {
-                if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-                    changeTheme('dark')
-                }
-            }
-        }
-
-        /**
-         * Automatic theme switch
-         */
-        if (window.matchMedia) {
-            var query = window.matchMedia('(prefers-color-scheme: dark)');
-
-            try {
-                if(query.addEventListener) {
-                    query.addEventListener('change', e => {
-                        changeTheme(e.matches ? 'dark' : 'light');
-                    });
-                } else {
-                    query.addListener('change', e => {
-                        changeTheme(e.matches ? 'dark' : 'light');
-                    });
-                }
-
-            } catch (e) {
-
-            }
-        }
-    }
-
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        changeTheme(getActiveTheme() === 'light' ? 'dark' : 'light')
-    });
-}
-}
-
-/***/ }),
-
-/***/ "./src/js/top.js":
-/*!***********************!*\
-  !*** ./src/js/top.js ***!
-  \***********************/
-/***/ (() => {
-
-"use strict";
-
-
-var renderTop = function (payload) {
-    var top = document.querySelectorAll('[data-top-by]');
-
-    for(let i = 0; i < top.length; i++) {
-        var type  = top[i].getAttribute('data-top-by'),
-            cards = top[i].querySelectorAll('.card');
-
-        var set;
-
-        switch (type) {
-            default:
-            case 'total':
-
-                set = Object.values(payload['regions'])
-                    .sort(
-                        (a, b) => {
-                            if(a['total_cases'] > b['total_cases']) {
-                                return -1;
-                            }
-
-                            return a['total_cases'] < b['total_cases'] ? 1 : 0;
-                        }
-                    )
-                    .map(
-                        region => {
-                            return {
-                                title: region['name'],
-                                flag: region['iso3166a2'],
-                                number: region['total_cases']
-                            }
-                        }
-                    );
-
-                break;
-
-            case 'total_change':
-
-                set = Object.values(payload['regions'])
-                    .sort(
-                        (a, b) => {
-                            if(a['change']['total_cases'] > b['change']['total_cases']) {
-                                return -1;
-                            }
-
-                            return a['change']['total_cases'] < b['change']['total_cases'] ? 1 : 0;
-                        }
-                    )
-                    .map(
-                        region => {
-                            return {
-                                title: region['name'],
-                                flag: region['iso3166a2'],
-                                number: region['change']['total_cases']
-                            }
-                        }
-                    );
-
-                break;
-
-            case 'active':
-
-                set = Object.values(payload['regions'])
-                    .sort(
-                        (a, b) => {
-                            if(a['active_cases'] > b['active_cases']) {
-                                return -1;
-                            }
-
-                            return a['active_cases'] < b['active_cases'] ? 1 : 0;
-                        }
-                    )
-                    .map(
-                        region => {
-                            return {
-                                title: region['name'],
-                                flag: region['iso3166a2'],
-                                number: region['active_cases']
-                            }
-                        }
-                    );
-
-                break;
-
-            case 'recovered':
-
-                set = Object.values(payload['regions'])
-                    .sort(
-                        (a, b) => {
-                            if(a['recovered'] > b['recovered']) {
-                                return -1;
-                            }
-
-                            return a['recovered'] < b['recovered'] ? 1 : 0;
-                        }
-                    )
-                    .map(
-                        region => {
-                            return {
-                                title: region['name'],
-                                flag: region['iso3166a2'],
-                                number: region['recovered']
-                            }
-                        }
-                    );
-
-                break;
-
-            case 'deaths':
-
-                set = Object.values(payload['regions'])
-                    .sort(
-                        (a, b) => {
-                            if(a['deaths'] > b['deaths']) {
-                                return -1;
-                            }
-
-                            return a['deaths'] < b['deaths'] ? 1 : 0;
-                        }
-                    )
-                    .map(
-                        region => {
-                            return {
-                                title: region['name'],
-                                flag: region['iso3166a2'],
-                                number: region['deaths']
-                            }
-                        }
-                    );
-
-                break;
-
-            case 'tested':
-
-                set = Object.values(payload['regions'])
-                    .sort(
-                        (a, b) => {
-                            if(a['tested'] > b['tested']) {
-                                return -1;
-                            }
-
-                            return a['tested'] < b['tested'] ? 1 : 0;
-                        }
-                    )
-                    .map(
-                        region => {
-                            return {
-                                title: region['name'],
-                                flag: region['iso3166a2'],
-                                number: region['tested']
-                            }
-                        }
-                    );
-
-                break;
-        }
-
-        for(let k = 0; k < cards.length; k++) {
-            var card = cards[k];
-
-            var cardFlagEl = card.querySelector('.top-flag'),
-                nameEl = card.querySelector('.top-country'),
-                numberEl = card.querySelector('.top-number');
-
-            if(cardFlagEl) {
-                cardFlagEl.setAttribute('src', 'https://www.countryflags.io/' + set[k].flag + '/flat/64.png');
-            }
-
-            if(nameEl) {
-                nameEl.innerText = __(set[k].flag, set[k].title);
-            }
-
-            if(numberEl) {
-                numberEl.innerText = formatNumber(set[k].number);
-            }
-        }
-    }
-};
 
 /***/ }),
 
@@ -1380,7 +653,6 @@ var renderTop = function (payload) {
   \*************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = jQuery;
 
 /***/ })

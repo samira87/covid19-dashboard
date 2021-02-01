@@ -27,19 +27,19 @@ import './css/font-awesome.min.css';
 //import './js/jquery.js';
 //import './js/jquery.slim.min.js';
 //import './js/chart.js';
-import './js/content.js';
+//import './js/content.js';
 //import './js/jquery.vmap.min.js';
 //import './js/chart-bars.js';
 //import './js/Chart.min.js';
-import './js/map.js';
-import './js/table.js';
-import './js/theme.js';
-import './js/news.js';
+//import './js/map.js';
+//import './js/table.js';
+//import './js/theme.js';
+//import './js/news.js';
 //import './js/jquery.dataTables.min.js';
 //import './js/jquery.vmap.world.js';
 //import './js/script.js';
-import './js/top.js';
-import './js/a076d05399.js';
+//import './js/top.js';
+//import './js/a076d05399.js';
 
 
 
